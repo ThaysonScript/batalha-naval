@@ -50,6 +50,24 @@ DB_DATABASE=batalha_naval
 DB_USERNAME=laravel  
 DB_PASSWORD=laravel
 
+### Arquivo com o comando Docker
+O mesmo comando para subir o PostgreSQL também está salvo no arquivo `banco-docker.txt` na raiz do projeto. Isso facilita repetir ou versionar o comando.
+
+Como usar:
+
+```bash
+# mostrar o conteúdo do arquivo
+cat banco-docker.txt
+
+# executar o comando (executa o conteúdo como um pequeno script)
+bash banco-docker.txt
+```
+
+Dicas úteis:
+- Antes de executar, confirme que o Docker está rodando: `docker ps`
+- Se quiser garantir que o container será recriado limpo: `docker rm -f pg-batalha-naval` e então `bash banco-docker.txt`
+- Se preferir usar docker-compose, posso gerar um `docker-compose.yml` com o mesmo serviço.
+
 ## Configuração inicial do projeto
 No diretório do projeto:
 ```bash
